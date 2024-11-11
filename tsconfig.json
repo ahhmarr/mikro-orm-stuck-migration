@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "lib": ["ES2022"],
+    "target": "ES2022",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "strict": true,
+    "outDir": "./dist",
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "declarationDir": "./dist",
+    "incremental": true,
+    "skipLibCheck": true,
+    "experimentalDecorators": true
+  },
+  "include": ["./src"],
+  "exclude": ["node_modules", "build", "dist", "src/**/*.js"]
+}

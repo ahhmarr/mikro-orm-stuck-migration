@@ -1,0 +1,41 @@
+{
+  "name": "mikro-orm-stuck-migration",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "npm run build && node dist/index.js",
+    "dev:local": "tsx watch --inspect=0.0.0.0:9000 ./src/index.ts",
+    "migrate:db:create": "mikro-orm migration:create --blank",
+    "seed:create": "mikro-orm seeder:create",
+    "seed:run": "mikro-orm seeder:run",
+    "format": "prettier . --write"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@mikro-orm/cli": "6.4.0",
+    "@mikro-orm/core": "6.4.0",
+    "@mikro-orm/migrations": "6.4.0",
+    "@mikro-orm/postgresql": "6.4.0",
+    "@mikro-orm/reflection": "6.4.0",
+    "@mikro-orm/seeder": "6.4.0",
+    "@mikro-orm/sql-highlighter": "1.0.1",
+    "mikro-orm": "6.4.0",
+    "ts-node": "10.9.2"
+  },
+  "devDependencies": {
+    "@types/jest": "29.5.12",
+    "@types/node": "20.14.5",
+    "@types/uuid": "10.0.0",
+    "tsx": "4.15.6",
+    "typescript": "5.4.5"
+  },
+  "mikro-orm": {
+    "useTsNode": true,
+    "configPaths": [
+      "./src/database/mikro-orm.config.ts"
+    ]
+  }
+}
